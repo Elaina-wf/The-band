@@ -1,0 +1,23 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.5;
+    --primary-font-word:1.5rem;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+
+/* Responsive */
+@media only screen (min-width:400px) and (max-width:800px) {
+    
+}
+
+
+
