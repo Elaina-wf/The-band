@@ -15,6 +15,43 @@ html{
 
 
 /* Responsive */
+    /* Tablet Responsive */
+@media (min-width:768px) and (max-width:1023px) {
+    .content-section {
+        font-size: 2.4rem;
+        margin: 0 16px;
+        padding-top: 64px;
+        padding-bottom: 110px;
+    }
+    .tour__section {
+        background-color: #000;
+        margin: 0;
+        padding: 64px 16px 110px 16px;
+        color: #fff;
+    }
+    .contact {
+    
+        margin: 0 16px;
+        padding-top: 64px;
+        padding-bottom: 110px;
+    }
+    .head-input input {
+        font-size: 1.6rem;
+        padding: 8px;
+        width: 49.18%;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
 
 
-
+    }
+    img.img-section{
+        width: 60%;
+        max-height: 147px;
+        object-fit: cover;
+    }
+    #slider-scroll img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
