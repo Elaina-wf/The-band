@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/Circle-icons-computer.svg.png">
     <link rel="stylesheet" href="/The band/assets/css/style.css">
     <link rel="stylesheet" href="/The band/assets/css/base.css">
+    <link rel="stylesheet" href="/The band/assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.0-web/css/all.css">
     <link rel="stylesheet" href="./assets/img/">
 
@@ -18,12 +19,12 @@
     <div id="main">
         <!-- Header  -->
         <div id="header">
-            <ul id="nav">
-                <li><a href="#slider">HOME</a></li>
+            <ul id="nav-pc">
+                <li><a href="#">HOME</a></li>
                 <li><a href="#band">BAND</a></li>
                 <li><a href="#tour">TOUR</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                <li>
+                <li class="nav-drop">
                     <a href="#">MORE
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
@@ -36,11 +37,28 @@
                 </li>
                 <li class="search-btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        
+                </li>
+                <li id="mobile-menu" class="bars-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </li>
                 
             </ul>
 
+            <!-- <ul id="nav-mobile">
+                <li class="nav-home"><a href="#">HOME</a>
+                </li>                
+                <li class="nav-menu__btn"><i class="fa-solid fa-bars"></i></li>
+                
+                    <ul class="nav-list">
+                        <li><a href="#band">BAND</a></li>
+                        <li><a href="#tour">TOUR</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#">MERCH</a></li>
+                    </ul>
+                    
+                
+                
+            </ul> -->
             
         </div>
         <!-- Slider -->
@@ -117,7 +135,7 @@
 
             <!-- Content Tour  -->
 
-            <div  class="content-section tour__section " id="tour">
+            <div  class=" tour__section " id="tour">
                 <h3 class="text-heading">Tour dates</h3>
                 <p class="sub-heading">Remember to book your tickets!</p>
                 <ul class="tour__tickets">
@@ -158,7 +176,7 @@
 
                         
                     </div>
-                    <div style="margin:0 16px ;" class="address-container">
+                    <div class="address-container">
                         <div class="address-img">
                             <img class="address-img address__sourceimg" src="https://www.w3schools.com/w3images/paris.jpg" alt="">
 
@@ -217,7 +235,7 @@
                 <h3 class="text-heading">Contact</h3>
                 <p class="sub-heading">Fan? Drop a note!</p>
                 <div class="contact-section">
-                    <div class="contact-left">
+                    <div class="contact-text">
                         <ul class="contact-info">
                             <li><i class="fa-solid fa-location-dot"></i>Chicago, US</li>
                             <li><i class="fa-solid fa-phone"></i>Phone: +00 151515</li>
@@ -225,7 +243,7 @@
                         </ul>
                     </div>
 
-                    <div class="contact-right">
+                    <div class="contact-input">
                         <div class="head-input">
                             <input type="text" placeholder="Name">
                             <input type="text" placeholder="Email">
@@ -263,6 +281,49 @@
         </div>
     </div>
     
+
+<!-- Script code  -->
+
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+
+            //Open & close menu
+        mobileMenu.onclick = function() {            
+            var isClose = header.clientHeight === headerHeight;
+            if(isClose) {
+                header.style.height = 'auto';
+                
+            } else {
+                header.style.height = null;
+                
+            }
+        }
+
+
+            //Auto close menu when pick any menu
+
+        var menuItems = document.querySelectorAll('#nav-pc li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuIt = menuItems[i];
+            
+            menuIt.onclick = function(event) {
+            var isParentMenu = this.nextElementSibling && menuIt.nextElementSibling.classList.contains('subnav');
+
+                if (!isParentMenu) {
+                    header.style.height = null;
+                } else {
+                    event.preventDefault();
+                }
+            }
+        }
+
+
+
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,144 @@
+/* Responsive */
+    /* PC */
+    
+    @media (min-width:1024px) and (max-width:3000px) {
+        .head-input input {
+                font-size: 1.6rem;
+                padding: 8px;
+                width: 48.89%;
+                font-weight: 400;
+                font-family: Arial, Helvetica, sans-serif;
+                border: 1px solid rgb(0 0 0 / 28%);
+        }
+    }
+    /* Tablet Responsive */
+    @media (min-width:768px) and (max-width:1023px) {
+        .content-section {
+            font-size: 2.4rem;
+            margin: 0 16px;
+            padding-top: 64px;
+            padding-bottom: 110px;
+        }
+        .tour__section {
+            background-color: #000;
+            margin: 0;
+            padding: 64px 16px 110px 16px;
+            color: #fff;
+        }
+        .contact {
+        
+            margin: 0 16px;
+            padding-top: 64px;
+            padding-bottom: 110px;
+        }
+        .head-input input {
+            font-size: 1.6rem;
+            padding: 8px;
+            width: 49%;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+    
+    
+        }
+        img.img-section{
+            width: 60%;
+            max-height: 147px;
+            object-fit: cover;
+        }
+        #slider-scroll img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width:767px) {
+
+/* Navigation */
+    #header {
+        height: 46px;
+        overflow: hidden;
+        
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #header .bars-btn {
+        display: block;
+    }
+    #nav-pc > li:first-child {
+        display: inline-block;
+    }
+    #nav-pc > li {
+        display: block;
+        
+    }
+    #nav-pc .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav-pc .subnav a {
+        color: #fff;
+        padding: 5px 40px;
+    }
+
+/* content */
+
+        .content-section {
+            margin: 0 16px;
+        }
+        #slider-scroll img {
+            height: 29rem;
+        }
+        .title-slider {
+            display: none;
+        }
+        .text-slider {
+            display: none;
+        }
+        .avt-container {
+            flex-direction: column  ;
+        }
+        img.img-section {
+            max-height: 300px;
+        }
+
+
+/* Tour */
+        .tour__section {
+            padding: 64px 16px 110px 16px;
+        }
+        .address-section {
+            flex-direction: column;
+        }
+        .address-img {
+            background-color: #000;
+            height: 40rem;
+            object-fit: cover;
+        }
+        
+
+/* Contact */
+
+        .contact {
+            margin: 0 16px;
+            padding-bottom: 25rem;
+        }
+
+        .contact-text {
+
+        }
+        
+        .contact-section {
+            padding: ;
+        }
+        .contact-input {
+            position: relative;
+            display: block;
+        }
+        .head-input input {
+            width: 100%;
+        }
+
+    }
