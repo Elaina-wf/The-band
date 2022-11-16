@@ -338,16 +338,41 @@ img.img-section{
 }
 
 .address-btn button{
-    background-color: #000;
-    color: #fff;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
     padding: 8px 12px;
     border: none;
+    position: relative;
+    border: 1px solid black;
 }
+.address-btn button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width:0;
+    height: 100%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    background-color: #ccc;
+    transition: width 0.15s ease-in;
+}
+.address-btn ,.text-btn {
+    position: relative;
+    
+    font-size: 1.6rem;
+}
+
 .address-btn button:hover {
     cursor: pointer;
-    background-color: #ccc;
     color: #000;
-    
+}
+
+.address-btn button:hover:before {
+    cursor: pointer;
+    color: #000;
+    width: 100%;
 }
 
 /* Contact */
@@ -397,7 +422,7 @@ img.img-section{
 } 
 .head-input {
     font-size: 2.2rem;
-    width: 100%;
+    width: 101%;
 
 }
 .head-input input {
@@ -411,7 +436,7 @@ img.img-section{
 }
 .footer-input {
     font-size: 2.2rem;
-    width: 100%;
+    width: 100.5%;
     padding-top: 8px;
     display: inline-block;
 }
@@ -429,24 +454,44 @@ img.img-section{
 .contact-button {
     font-size: 2rem;
     display: inline-block;
+    position: absolute;
+    right: 0;
 }
 
 .contact-btn  {
     padding: 8px 16px;
     text-transform: uppercase;
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
     margin: 8px 0;
     right: 0;
     position: absolute;
-    border: none;
+    border: 1px solid black;
     font-size: var(--primary-font-word);
 }
-
+.contact-btn::before {
+    content: "";
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width 0.15s ease-in;
+    height: 100%;
+}
+.contact-btn,.text-btn {
+    position: relative;
+    
+    font-size: 1.6rem;
+    color: #000;
+}
 .contact-btn:hover {
-    background-color: #757575;
+    
     cursor: pointer;
 
+}
+.contact-btn:hover::before {
+    width: 100%;
 }
 
 /* Map img */
